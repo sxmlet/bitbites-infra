@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: bitbites-fe
+  name: bitbites-fe-srv
+spec:
+  selector:
+    app: bitbites-fe
+  ports:
+    - port: 3000
+      protocol: TCP
+      targetPort: 80
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
