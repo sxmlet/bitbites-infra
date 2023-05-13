@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "cd2d1f22-beeb-4162-a548-a1d1bdd3d6ee",
+		"name": "bitBites",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1785063"
+	},
+	"item": [
+		{
+			"name": "get all bites",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "version",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get upload url",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites/signed-url/:filename",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites",
+						"signed-url",
+						":filename"
+					],
+					"variable": [
+						{
+							"key": "filename",
+							"value": "someobject"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all bites of user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{hostname}}/api/v0/:uid/bites",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						":uid",
+						"bites"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create bite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"new tech fda 2\",\n    \"content\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete bite",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New awesome tech\",\n    \"content\": \"with content\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites/:id",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "63"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update bite",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"That's a much better title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites/:id",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update bite Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"That's a much better title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v0/bites/:id",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"bites",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hostname",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}

@@ -2,7 +2,12 @@
 
 Contains kubernetes deployment and service configurations for bitBites services.
 
-![bitBites architecture](./bitBites_architecture.png)
+![bitBites architecture](images/bitBites_architecture.png)
+
+Each service has their own repository:
+* [bitBites bites api](https://github.com/sxmlet/bitbites-api)
+* [bitBites auth api](https://github.com/sxmlet/bites-auth-api)
+* [bitBites frontend](https://github.com/sxmlet/bitbites-fe)
 
 ## Prerequisites
 Configured environment variables through these descriptors:
@@ -51,6 +56,10 @@ There are helper scripts in the directory to speed up things when running the ap
 ./deployment/provision.sh
 ./service/provision.sh
 ```
+
+After the initial setup tag creation will trigger new deployments in the related repositories.
+
+![bitBites_deployment_flow.png](images%2FbitBites_deployment_flow.png)
 
 ## Local Development
 
